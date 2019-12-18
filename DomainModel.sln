@@ -9,13 +9,34 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppliConsole", "AppliConsole\AppliConsole.csproj", "{C574B438-5FC3-48D4-BBEC-2208F82558C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{60C4F66D-2A87-4B3F-B4DE-7E367415003A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{60C4F66D-2A87-4B3F-B4DE-7E367415003A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{5D24CB55-CB3C-4A28-8E05-3B821C060689}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{31BE36D2-20FF-461C-B941-CA92BA2CDE8F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HappyClients", "HappyClients", "{1EFF0C98-9876-4A27-9E97-A7D1A05D77B1}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FrontWeb", "FrontWeb\", "{EE91375E-421B-4267-A30F-F8FB3539F537}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62529"
+		Debug.AspNetCompiler.PhysicalPath = "FrontWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62529\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62529"
+		Release.AspNetCompiler.PhysicalPath = "FrontWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62529\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62529"
+		SlnRelativePath = "FrontWeb\"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +60,10 @@ Global
 		{60C4F66D-2A87-4B3F-B4DE-7E367415003A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60C4F66D-2A87-4B3F-B4DE-7E367415003A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60C4F66D-2A87-4B3F-B4DE-7E367415003A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE91375E-421B-4267-A30F-F8FB3539F537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE91375E-421B-4267-A30F-F8FB3539F537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE91375E-421B-4267-A30F-F8FB3539F537}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE91375E-421B-4267-A30F-F8FB3539F537}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +73,7 @@ Global
 		{11EE347D-1589-4156-BD8D-DBF85E2043D9} = {5D24CB55-CB3C-4A28-8E05-3B821C060689}
 		{C574B438-5FC3-48D4-BBEC-2208F82558C8} = {1EFF0C98-9876-4A27-9E97-A7D1A05D77B1}
 		{60C4F66D-2A87-4B3F-B4DE-7E367415003A} = {31BE36D2-20FF-461C-B941-CA92BA2CDE8F}
+		{EE91375E-421B-4267-A30F-F8FB3539F537} = {31BE36D2-20FF-461C-B941-CA92BA2CDE8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {929A2252-BE3F-492D-8E13-45C10A1A2993}

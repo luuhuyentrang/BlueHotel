@@ -13,7 +13,6 @@ namespace DAL
         public DbSet<Customer> Customers{ get; set; }
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Room> Rooms { get; set; }
-
         public DbSet<BookingRoom> BookingRooms { get; set; }
 
         public BlueContext() : base()
@@ -24,7 +23,8 @@ namespace DAL
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb; Initial Catalog=BlueDb; Integrated Security=true");
+            // only for AppliConsole
+            //optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb; Initial Catalog=BlueDb; Integrated Security=true");
             //Integrated Security=true, connactionString
 
             base.OnConfiguring(optionsBuilder);

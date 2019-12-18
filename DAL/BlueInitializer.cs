@@ -35,7 +35,7 @@ namespace DAL
                             Latitude=12,
                             Logitude =150,
                             Country ="France",
-                            Phone ="+33 560 54 35 35",
+                            Phone ="+3356124",
                             Email ="kqhdsq@gmail.com"
 
                         },
@@ -47,7 +47,7 @@ namespace DAL
                             Latitude=54,
                             Logitude =42,
                             Country ="Vietnam",
-                            Phone ="+33 4235546",
+                            Phone ="+334235546",
                             Email ="trang@gmail.com"
 
                         },
@@ -60,7 +60,7 @@ namespace DAL
                             Latitude=100,
                             Logitude =45,
                             Country ="Belgique",
-                            Phone ="+45 2453 466445",
+                            Phone ="+4524466445",
                             Email ="lille@gmail.com"
 
                         },
@@ -73,7 +73,7 @@ namespace DAL
                             Latitude=47,
                             Logitude =123,
                             Country ="Laos",
-                            Phone ="+412648979875",
+                            Phone ="+4126489875",
                             Email ="hanoi@gmail.com"
 
                         },
@@ -111,7 +111,7 @@ namespace DAL
                         {
 //                             
                             Name="Balzac",
-                            Star =4,
+                            Star = 4,
                             Address =addresses[0]
                             
 
@@ -119,7 +119,7 @@ namespace DAL
                 new Hotel()
                         {
                             Name="Luu",
-                            Star =3,
+                            Star = 3,
                             Address =addresses[1]
 
                         },
@@ -127,7 +127,7 @@ namespace DAL
                 new Hotel()
                         {
                             Name="Dell",
-                            Star =5,
+                            Star = 5,
                             Address =addresses[5]
 
                         },
@@ -202,7 +202,7 @@ namespace DAL
                             CheckIn =DateTime.Now.AddDays(3),
                             CheckOut=DateTime.Now.AddDays(6),
                             IsPaid = true,
-                            Price = 1245,
+                            Price = 245.20M,
                             Customer = customers[0]
                         },
 
@@ -212,7 +212,7 @@ namespace DAL
                             CheckIn =DateTime.Now.AddDays(5),
                             CheckOut=DateTime.Now.AddDays(9),
                             IsPaid = true,
-                            Price = 4215,
+                            Price = 215.2M,
                             Customer = customers[1]
                         },
 
@@ -222,7 +222,7 @@ namespace DAL
                             CheckIn =DateTime.Now.AddDays(7),
                             CheckOut=DateTime.Now.AddDays(12),
                             IsPaid = false,
-                            Price = 1245,
+                            Price = 245.4M,
                             Customer = customers[2]
                         },
                 };
@@ -255,12 +255,18 @@ namespace DAL
 
 
             context.Addresses.AddRange(addresses);
+
             context.Hotels.AddRange(hotels);
+
             context.Customers.AddRange(customers);
+
             context.Rooms.AddRange(rooms);
+
             context.Bookings.AddRange(bookings);
+
             context.BookingRooms.AddRange(bookingrooms);
             context.SaveChanges();
+
 
         }
 

@@ -18,7 +18,7 @@ namespace DomainModel
 
         #region Properties
          // propriétés de navigations
-         [Required]
+         //[Required]
         public virtual Address Address { get; set; }
         public virtual ICollection<Room> Rooms { get; set; }
 
