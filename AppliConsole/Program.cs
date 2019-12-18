@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DomainModel;
 using System;
 using System.Linq;
 
@@ -10,9 +11,8 @@ namespace AppliConsole
         { // pour voir si le db marche 
            using ( BlueContext db = new BlueContext())
             {
-                db.Database.EnsureDeleted();
-                db.Database.EnsureCreated()                    ;
-                //var bookings = db.Bookings.ToList();
+                db.Initialize(true);
+
                 var customers = db.Customers.ToList();
 
             }

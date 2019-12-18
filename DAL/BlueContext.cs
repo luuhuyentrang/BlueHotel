@@ -14,17 +14,14 @@ namespace DAL
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Room> Rooms { get; set; }
 
+        public DbSet<BookingRoom> BookingRooms { get; set; }
+
         public BlueContext() : base()
         {
-            
         }
-
-        public BlueContext(DbContextOptions options)
-            : base(options)
+        public BlueContext(DbContextOptions options) : base(options)
         {
-
         }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb; Initial Catalog=BlueDb; Integrated Security=true");
@@ -32,9 +29,7 @@ namespace DAL
 
             base.OnConfiguring(optionsBuilder);
         }
-
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+     protected override void OnModelCreating(ModelBuilder modelBuilder)
         { 
             // relation hotel and room ; many to one
             modelBuilder.Entity<Hotel>()

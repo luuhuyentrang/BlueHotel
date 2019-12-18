@@ -24,7 +24,7 @@ namespace DomainModel.Entity
 
         // propriétés de navigations
         public virtual Hotel Hotel { get; set; }
-        public virtual ICollection<Booking> Bookings { get; set; }
+       // public virtual ICollection<Booking> Bookings { get; set; }
 
         public virtual ICollection<BookingRoom> BookingRooms { get; set; }
 

@@ -28,7 +28,7 @@ namespace DomainModel.Entity
         #endregion
         // propriétés de navigations
         //pas besoin
-        public virtual Hotel Hotel { get; set; }
+        
 
         #region Properties
         [Key]

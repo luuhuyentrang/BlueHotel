@@ -16,7 +16,7 @@ namespace DomainModel.Entity
         private DateTime checkIn;
         private DateTime checkOut;
         private bool isPaid;
-        private decimal price;
+        //private decimal price;
 
         #endregion
 
@@ -25,7 +25,7 @@ namespace DomainModel.Entity
 
         // propriétés de navigations
         public virtual Customer Customer { get; set; }
-        public virtual ICollection<Room> Rooms { get; set; }
+        //public virtual ICollection<Room> Rooms { get; set; }
 
         public virtual ICollection<BookingRoom> BookingRooms { get; set; }
 
@@ -52,9 +52,10 @@ namespace DomainModel.Entity
             get { return checkIn; }
             set { checkIn = value; }
         }
-        
+
 
         [Required]
+
         [Range(typeof(DateTime), "01/01/2019", "31/12/2100")]
         public DateTime CheckOut
         {
@@ -69,13 +70,17 @@ namespace DomainModel.Entity
             set { isPaid = value; }
         }
 
+        [Range(0.0, double.MaxValue)]
         [Required]
-        
-        public decimal Price
-        {
-            get { return price; }
-            set { price = value; }
-        }
+        [Column(TypeName = "decimal(5,2)")]
+        public decimal Price { get; set; }
+
+        //public decimal Price
+        //{
+        //    get { return price; }
+        //    set { price = value; }
+        //}
+
         #endregion
     }
 }
