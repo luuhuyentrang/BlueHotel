@@ -26,6 +26,7 @@ namespace DAL
             // only for AppliConsole
             //optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb; Initial Catalog=BlueDb; Integrated Security=true");
             //Integrated Security=true, connactionString
+            optionsBuilder.UseSqlServer(@"Server=tcp:bluedblht.database.windows.net,1433;Initial Catalog=BlueDb;Persist Security Info=False;User ID=luuhuyentrang;Password=Balance@26091988;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
 
             base.OnConfiguring(optionsBuilder);
         }

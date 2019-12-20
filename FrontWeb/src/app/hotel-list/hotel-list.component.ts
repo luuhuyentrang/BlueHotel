@@ -22,4 +22,38 @@ export class HotelListComponent implements OnInit {
     .subscribe(hotelList => this.hotels = hotelList);
   }
 
+  addHotel(){
+    let hotel: Hotel = {      
+      name:'Blue sea',
+      star: 3
+    };
+
+    this.hotelService.addHotel(hotel)
+    .subscribe(hotel => this.hotels.push(hotel));
+
+  }
+
+  updateHotel(hotel: Hotel):void{
+
+    let newHotel: Hotel = {
+
+      hotelId: hotel.hotelId,
+      name: 'Dark Blue Hotel Lauriston',
+      star: 3
+    };
+
+    this.hotelService.updateHotel(newHotel)
+      .subscribe(o => this.getHotels());
+
+  }
+
+  deleteHotel(hotel: Hotel): void{
+    
+    this.hotelService.deleteHotel(hotel)
+      .subscribe(o => {
+        this.hotels = this.hotels.filter(h => h !== hotel);
+      });
+
+  }
 }
+
