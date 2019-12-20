@@ -9,7 +9,7 @@ import {Hotel} from './model/hotel';
 })
 export class HotelService {
 
-  private apiUrl = 'https://localhost:44393/api/hotels';
+  private apiUrl = 'https://bluehotellht.azurewebsites.net/api/hotels';
 
   private httpOptions ={
     headers : new HttpHeaders({'content-type': 'application/json'})
@@ -28,7 +28,7 @@ export class HotelService {
   getHotel(hotelId: number) : Observable<Hotel>{
     /*let test = this.http.get<Hotel[]>(this.apiUrl);*/
 
-    return this.http.get<Hotel>('${this.apiUrl}/${hotelId}');
+    return this.http.get<Hotel>(`${this.apiUrl}/${hotelId}`);
   }
 
   addHotel(hotel: Hotel) : Observable<Hotel>{
@@ -37,7 +37,7 @@ export class HotelService {
   }
 
   updateHotel(hotel: Hotel) : Observable<any>{
-    const url = '${this.apiUrl}/${hotel.hotelId}';
+    const url = `${this.apiUrl}/${hotel.hotelId}`;
     
     return this.http.put<Hotel>(url, hotel, this.httpOptions);
   }
@@ -45,7 +45,7 @@ export class HotelService {
   deleteHotel(hotel : Hotel | number) : Observable<Hotel>{
     const id : number = typeof hotel === 'number' ? hotel : hotel.hotelId;
 
-    const url = '${this.apiUrl}/${id}';
+    const url = `${this.apiUrl}/${id}`;
     return this.http.delete<Hotel>(url);
 
 
